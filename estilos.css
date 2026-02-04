@@ -12,7 +12,7 @@ body {
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     margin: 0;
-    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -23,11 +23,13 @@ body {
 
 /* Navegación */
 .navbar {
-    background: rgba(15, 23, 42, 0.9);
+    background: var(--bg-color); 
     position: sticky;
     top: 0;
     padding: 1rem;
     z-index: 1000;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1); 
+    transition: background 0.3s ease;
 }
 
 .navbar ul {
@@ -50,17 +52,15 @@ body {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
 }
 
-/* Añade esto para agrandar el nombre */
 .hero h1 {
-    font-size: 3.5rem; /* Tamaño mucho más grande que el estándar */
+    font-size: 3.5rem;
     margin-bottom: 10px;
-    letter-spacing: -1px; /* Opcional: junta un poco las letras para un look más moderno */
+    letter-spacing: -1px;
 }
 
 .highlight {
@@ -174,9 +174,46 @@ footer {
     color: var(--text-dim);
 }
 
+/* Variables para Modo Claro */
+.light-mode {
+    --bg-color: #f1f5f9;
+    --card-color: #ffffff;
+    --accent-color: #0369a1;
+    --text-main: #1e293b;
+    --text-dim: #475569;
+    border-color: #cbd5e1;
+}
+
+.light-mode .card, 
+.light-mode .skill-badge {
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode .theme-btn {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+    color: #1e293b;
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--text-main);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: var(--accent-color);
+    color: #fff;
+}
+
 @media (max-width: 600px) {
     .hero h1 {
-        font-size: 2.5rem; /* Se reduce en pantallas pequeñas */
+        font-size: 2.5rem; 
     }
 }
 
