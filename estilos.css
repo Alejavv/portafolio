@@ -137,8 +137,35 @@ footer {
     color: var(--accent-color);
     transform: scale(1.1);
 }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto; /* Centra el formulario */
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    background: var(--card-color);
+    border: 1px solid #334155;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
 
 /* Color específico para cada icono al pasar el mouse */
 .fa-github:hover { color: #f0f6fc; }
 .fa-linkedin:hover { color: #0a66c2; }
-.fa-envelope:hover { color: #ea4335; }
