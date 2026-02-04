@@ -50,13 +50,21 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
 }
 
+/* Añade esto para agrandar el nombre */
+.hero h1 {
+    font-size: 3.5rem; /* Tamaño mucho más grande que el estándar */
+    margin-bottom: 10px;
+    letter-spacing: -1px; /* Opcional: junta un poco las letras para un look más moderno */
+}
+
 .highlight {
-    color: var(--accent-color);
+    color: var(--accent-color); /* */
 }
 
 /* Secciones */
@@ -164,6 +172,12 @@ footer {
     font-weight: bold;
     font-size: 0.9rem;
     color: var(--text-dim);
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Se reduce en pantallas pequeñas */
+    }
 }
 
 /* Color específico para cada icono al pasar el mouse */
